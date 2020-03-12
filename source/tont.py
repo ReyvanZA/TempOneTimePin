@@ -14,6 +14,4 @@ totp = pyotp.TOTP(base32secret)
 print('OTP code:', totp.now())
 
 url = pyqrcode.create(totp_uri)
-url.png('scan.png')
-
-
+url.png('scan.png', scale=8)
